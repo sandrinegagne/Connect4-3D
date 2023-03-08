@@ -85,10 +85,6 @@ class gameboard(QtWidgets.QMainWindow):
         return floor
 
     def detect_win(self,play):
-        
-        row_index = int(position_list[0])-1
-        column_index = int(position_list[1])-1
-        player_id = int(position_list[2])
         for streak in streak_counter(play,self.gb.board,self.gb.row_total,self.gb.column_total,self.gb.floor_total,self.AI_id):
             if streak == 1:
                 strength=strength+11
